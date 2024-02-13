@@ -1,9 +1,9 @@
 import asyncio
 from aiogram import Dispatcher, Bot
 from aiogram.enums import ParseMode
-import config
+import os
 
-TOKEN = config.BOT_TOKEN
+TOKEN = os.environ.get("BOT_TOKEN")
 dp = Dispatcher()
 bot = Bot(TOKEN, parse_mode=ParseMode.HTML)
 
